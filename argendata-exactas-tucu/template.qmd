@@ -9,7 +9,7 @@ authors:
   - name: Juan Pablo Ruiz Nicolini
     acknowledgements: <a>\@tuqmano</a>
     affiliation: Coordinador del Área de Datos
-    email: jcfundar@fund.ar
+    email: jpruiznicolini@fund.ar
 
   - name: Joan Imanol Gonzalez Quiroga
     affiliation: Científico de datos
