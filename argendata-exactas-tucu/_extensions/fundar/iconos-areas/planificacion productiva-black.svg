@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="CONTENIDOS" viewBox="0 0 600 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1c1c1c;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" y="250.82" width="600" height="49.18"></rect>
+  <rect class="cls-1" y="172.13" width="600" height="49.18"></rect>
+  <rect class="cls-1" y="15.32" width="600" height="49.18"></rect>
+  <rect class="cls-1" y="93.44" width="600" height="49.18"></rect>
+  <rect class="cls-1" x="-37.2" y="213.62" width="123.59" height="49.18" transform="translate(262.8 213.62) rotate(90)"></rect>
+  <rect class="cls-1" x="513.28" y="55.9" width="124.27" height="49.18" transform="translate(655.9 -494.92) rotate(90)"></rect>
+</svg>

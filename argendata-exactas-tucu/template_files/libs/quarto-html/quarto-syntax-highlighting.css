@@ -1,0 +1,216 @@
+/* quarto syntax highlight colors */
+:root {
+  --quarto-hl-al-color: #000000;
+  --quarto-hl-an-color: #FF0000;
+  --quarto-hl-at-color: #FF9750;
+  --quarto-hl-bn-color: #000000;
+  --quarto-hl-bu-color: #9C46F7;
+  --quarto-hl-ch-color: #FF0000;
+  --quarto-hl-co-color: #9C9CBC;
+  --quarto-hl-cv-color: #000000;
+  --quarto-hl-cn-color: #000000;
+  --quarto-hl-cf-color: #9C46F7;
+  --quarto-hl-dt-color: #000000;
+  --quarto-hl-dv-color: #FF9750;
+  --quarto-hl-do-color: #000000;
+  --quarto-hl-er-color: #000000;
+  --quarto-hl-ex-color: #000000;
+  --quarto-hl-fl-color: #FF9750;
+  --quarto-hl-fu-color: #3F9E6C;
+  --quarto-hl-im-color: #9C46F7;
+  --quarto-hl-in-color: #000000;
+  --quarto-hl-kw-color: #9C46F7;
+  --quarto-hl-op-color: #9C46F7;
+  --quarto-hl-pp-color: #3F3FA5;
+  --quarto-hl-re-color: #3F3FA5;
+  --quarto-hl-sc-color: #000000;
+  --quarto-hl-ss-color: #000000;
+  --quarto-hl-st-color: #3F9E6C;
+  --quarto-hl-va-color: #FF9750;
+  --quarto-hl-vs-color: #000000;
+  --quarto-hl-wa-color: #000000;
+}
+
+/* other quarto variables */
+:root {
+  --quarto-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+code span.al {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.an {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.at {
+  color: #FF9750;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.bn {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.bu {
+  color: #9C46F7;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.ch {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.co {
+  color: #9C9CBC;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.cv {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.cn {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.cf {
+  color: #9C46F7;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.dt {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.dv {
+  color: #FF9750;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.do {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.er {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.ex {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.fl {
+  color: #FF9750;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.fu {
+  color: #3F9E6C;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.im {
+  color: #9C46F7;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.in {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.kw {
+  color: #9C46F7;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.op {
+  color: #9C46F7;
+  font-weight: bold;
+  font-style: inherit;
+}
+
+code span.pp {
+  color: #3F3FA5;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.re {
+  color: #3F3FA5;
+  font-style: italic;
+}
+
+code span.sc {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.ss {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.st {
+  color: #3F9E6C;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.va {
+  color: #FF9750;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.vs {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+code span.wa {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.prevent-inlining {
+  content: "</";
+}
+
+/*# sourceMappingURL=debc5d5d77c3f9108843748ff7464032.css.map */

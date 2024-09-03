@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="600px" height="300px" viewBox="0 0 600 300" style="enable-background:new 0 0 600 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#000000;}
+	.st1{fill:#000000;}
+</style>
+<g id="Bg">
+</g>
+<g id="Contenido">
+	<g>
+		<rect x="1.6" y="250.7" class="st0" width="596.7" height="49"/>
+		<circle class="st0" cx="26.1" cy="40.2" r="25.6"/>
+		<circle class="st0" cx="339.2" cy="40.2" r="25.6"/>
+		<circle class="st0" cx="104.2" cy="118.7" r="25.6"/>
+		<circle class="st0" cx="182.7" cy="118.7" r="25.6"/>
+		<circle class="st1" cx="417.3" cy="118.7" r="25.6"/>
+		<circle class="st0" cx="104.2" cy="196.8" r="25.6"/>
+		
+			<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 24.7556 422.6673)" class="st0" cx="260.8" cy="196.8" rx="25.6" ry="25.6"/>
+		<circle class="st0" cx="339.2" cy="196.8" r="25.6"/>
+		<circle class="st0" cx="495.8" cy="196.8" r="25.6"/>
+		<circle class="st0" cx="573.9" cy="196.8" r="25.6"/>
+	</g>
+</g>
+<g id="HEADER">
+</g>
+</svg>

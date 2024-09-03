@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<section class="firstsect">
+<h1 style="display: none; color:transparent">$title$</h1>
+<div class="container">
+<div class="columns">
+
+<div class="column left-column">
+    <image src="./_extensions/fundar/logo_fundar-light (copy).svg" alt="logo" width="100%">
+    <div style="height: 300px;">&nbsp;</div>
+</div>
+
+<div class="column right-column">
+    <div class="quarto-fundar-area-logo">
+        <img src="./_extensions/fundar/iconos-areas/$if(area)$$area$$else$datos$endif$-black.svg" alt="logo" width="30%">
+    </div>
+    <div class="quarto-title-authors">
+        $for(by-author)$
+        <div class="quarto-title-author">
+            <div class="quarto-title-author-name">
+                <h3>$by-author.name.literal$</h3>
+            </div>
+            $if(by-author.affiliations)$
+            $for(by-author.affiliations)$
+            <div class="quarto-title-affiliation">
+                $it.name$
+            </div>
+            $endfor$
+            $endif$
+            
+            $if(by-author.email)$
+            <div class="quarto-title-author-email">
+                <a href="mailto:$by-author.email$">$by-author.email$</a>
+                $if(by-author.acknowledgements)$
+                <a>|</a> $by-author.acknowledgements$
+                $endif$
+            </div>
+            $endif$
+        </div>
+        <div style="display: flex; font-size: 50%;">
+        &nbsp;
+        </div>
+        $endfor$
+    </div>
+</div>
+
+</div>
+<div class="bottom-box">
+    <div class="quarto-title-title">
+        $title$
+    </div>
+    <div class="quarto-title-subtitle">
+        $subtitle$
+    </div>
+</div>
+
+</div>
+</section>
+</html>
