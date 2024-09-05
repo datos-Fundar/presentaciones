@@ -18,6 +18,9 @@ authors:
 ---
 
 ## Hoja de ruta
+::: {.notes}
+Fundar (la organizacion); Datos (el equipo); Argendata (la cocina); QA; ETL; T (La segunda **T**)
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -28,27 +31,65 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
-## Sobre Fundar
+::: {.incremental}
+- **Fundar**
+  - **Datos**
+    -  Nosotros =\)
+
+- **Argendata** -  la cocina
+  - Calidad de datos
+  - Proceso ETL
+  - _Transformers_
+:::
+
+## Fundar
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Sobre Fundar</div>
+  <div class="left-text">La organización</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
 
-## Datos Fundar
+<div align='center'>
+<picture>
+<img src="sobrefundar.png" width=5000 style="border-radius: 20px;"></img>
+</picture>
+</div>
+
+## Área Datos 
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Datos Fundar</div>
+  <div class="left-text">El equipo</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
+
+![](datos.png){style="border-radius: 10px;"}
+
+## Área Datos - Nosotros
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Nosotros</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+::: {.r-stack}
+
+![](tuq.png){ width=2000 style="border-radius: 10px;"}
+
+![](joan.png){.fragment width=2000 style="border-radius: 10px;"}
+
+:::
 
 ## Argendata
 <!-- Barra superior negra  -->
@@ -61,7 +102,22 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
+<video autoplay="true" loop="true" width="2000">
+<source src="argendata_preview.mp4">
+</video>
+<script>
+document.querySelector('video').playbackRate = 0.3;
+</script>
+
+[argendata.fund.ar](argendata.fund.ar)
+
+#### Datos curados por especialistas ... 
+
+
 ## GitHub Argendata
+::: {.notes}
+Argendata cuenta con su propios repositorios abiertos en GitHub, donde se encuentran los datos, scripts y documentación de los mismos.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -72,52 +128,78 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
-<div align='center'>
-<a href="https://github.com/argendatafundar">
-<picture>
-<source srcset="captura.png">
-<img src="captura.png" width="1500"></img>
-</picture>
-</a>
-</div>
+#### Administrados por nosotros =\)
 
-## Workflow
+![](./argendatagithub.png){.absolute top=130 right=80 width=2000}
+
+## Flujo
+::: {.notes}
+El flujo de los datos fue el siguiente: (1) se recolectan los datos provistos por les investigadores (2) los datos pasan por un control de calidad y cuando están limpios se almacenan (3) simultáneamente se espeja el trabajo que realizaron les investigadores, llevando todo a scripts en R con un formato estandarizado (3.5) de aquí se toman los datos nuevamente cuando haya que actualizarlos (4) los datos son transformados a un formato más regular para ser graficado (ej. "categoria, nombre, valor"), las recetas de las transformaciones son guardadas para ser reproducidas cuando sea necesario (5) los datos graficados van a la web. **PERO...**
+:::
+
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text"><em>Workflow</em></div>
+  <div class="left-text"><em>Flujo</em></div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
 
-<div align='center'>
-<picture>
-<source srcset="simple.svg">
-<img src="captura.png" width="1500"></img>
-</picture>
-</div>
 
-## Workflow... más granular
+::: {.r-stack}
+
+![](simple-sin-loops.svg){width=1800}
+
+![](./simple.svg){.fragment width=1800 fragment-index=4}
+
+:::
+
+<ul>
+::: {.fragment fragment-index=1}
+  <li style="color:#7bb5c4;"><span>**CONTROL DE CALIDAD**</span></li>
+:::
+::: {.fragment fragment-index=2}
+  <li style="color:#8d9bff;"><span>**ARMONIZACIÓN DE PROCESOS**</span></li>
+:::
+::: {.fragment fragment-index=3}
+  <li style="color:#ffab40;"><span>**TRANSPARENCIA y REPRODUCIBILIDAD**</span></li>
+:::
+</ul>
+
+## Flujo... más granular
+::: {.notes}
+No nos perdamos: la parte superior de este nuevo diagrama es muy parecida a la que vimos antes. La recolección de datos arranca por los datos provistos, que vienen de distintas fuentes. Hay una fase intermedia de _landing_ de los datos: los almacenamos temporalmente en Google Drive para que les investigadores puedan manejarse con mayor facilidad. (No todo el mundo conoce Git/GitHub). Parte de la información que les pedimos almacenar es también _cómo_ extrajeron esos datos. Idealmente en scripts de R/Python, pero finalmente hubo mucho `.txt`. (Aprox 45% txt, 25% R, 18% dofile, 9% Python)
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text"><em>Workflow</em>... más granular</div>
+  <div class="left-text"><em>Flujo</em>... más granular</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
 
-<div align='center'>
-<picture>
-<source srcset="argendata-flujo-transparente-negro.svg">
-<img src="captura.png" width="1700"></img>
-</picture>
-</div>
+::: {.r-stack}
+
+![](argendata-flujo-transparente-negro.svg){.fragment width=1700 .fade-out fragment-index=4}
+
+![](flujo-controlcalidad.svg){.fragment width=1700 .fade-in-then-out fragment-index=1}
+
+![](flujo-armonizacion.svg){.fragment width=1737 .fade-in-then-out fragment-index=2}
+
+![](flujo-transparencia.svg){.fragment width=1700 .fade-in-then-out fragment-index=3}
+
+![](argendata-flujo-transparente-negro-focus-data.svg){.fragment width=1700 .fade-in fragment-index=4}
+
+:::
 
 ## ¡Datos abiertos!
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -128,14 +210,12 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
-<div align='center'>
-<picture>
-<source srcset="repo-data.png">
-<img src="captura.png" width="1700"></img>
-</picture>
-</div>
+![](argendatadatatranengithub.png){.absolute left=290 bottom=-60}
 
 ## Controles de calidad
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -156,6 +236,9 @@ authors:
 <img src="sankey-variabilidad-datos-entrada.png" width="1800"></img>
 
 ## Controles de calidad - Algunos problemas
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -166,22 +249,49 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
+::: {.incremental}
 - Formatos de entrada
   - Variabilidad en el tipo de archivo (csv, tsv, pdf, estáticos).
   - Variabilidad en el formato CSV (separador, _line terminator_, quoting, punto/coma decimal)
+
 - Almacenamiento
   - Google Drive
 - Control de cambios (versiones)
   - GitHub
 - Encoding
   - ["Estándares"](./xkcd-standards.png)
+
+    ![](./xkcd-standards.png){width="600"}
+
+:::
+
+## Controles de calidad - Algunos problemas
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Controles de calidad - Algunos problemas</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+::: {.incremental}
+- Encoding
   - UTF-8, UTF-8-BOM, `chardet` y compañía.
   - Caracteres invisibles
   - Re-encoding
 - Nomenclatura de fuentes
 - Nomenclatura de regiones geográficas
+:::
 
 ## Controles de calidad - Verificadores
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -245,6 +355,9 @@ FAILED (failures=1)
 :::
 
 ## Controles de calidad - Verificadores 
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -289,6 +402,9 @@ class ControlCSV:
 :::
 
 ## Controles de calidad - Verificadores
+::: {.notes}
+Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>

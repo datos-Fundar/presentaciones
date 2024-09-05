@@ -455,6 +455,19 @@
 
 <section id="hoja-de-ruta" class="slide level2">
 <h2>Hoja de ruta</h2>
+<aside class="notes">
+<p>Fundar (la organizacion); Datos (el equipo); Argendata (la cocina); QA; ETL; T (La segunda <strong>T</strong>)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -472,9 +485,26 @@ Hoja de ruta
 
 </div>
 </div>
+<div>
+<ul>
+<li class="fragment"><strong>Fundar</strong>
+<ul>
+<li class="fragment"><strong>Datos</strong>
+<ul>
+<li class="fragment">Nosotros =)</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>Argendata</strong> - la cocina
+<ul>
+<li class="fragment">Calidad de datos</li>
+<li class="fragment">Proceso ETL</li>
+<li class="fragment"><em>Transformers</em></li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="sobre-fundar" class="slide level2">
-<h2>Sobre Fundar</h2>
+<section id="fundar" class="slide level2">
+<h2>Fundar</h2>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -482,7 +512,7 @@ Hoja de ruta
 </div>
 <div class="center">
 <div class="left-text">
-Sobre Fundar
+La organización
 </div>
 <div class="logo">
 <img src="./_extensions/fundar/logo_fundar-light.svg">
@@ -492,9 +522,12 @@ Sobre Fundar
 
 </div>
 </div>
+<div data-align="center">
+<p><picture> <img src="sobrefundar.png" width="5000" style="border-radius: 20px;"> </picture></p>
+</div>
 </section>
-<section id="datos-fundar" class="slide level2">
-<h2>Datos Fundar</h2>
+<section id="área-datos" class="slide level2">
+<h2>Área Datos</h2>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -502,7 +535,7 @@ Sobre Fundar
 </div>
 <div class="center">
 <div class="left-text">
-Datos Fundar
+El equipo
 </div>
 <div class="logo">
 <img src="./_extensions/fundar/logo_fundar-light.svg">
@@ -511,6 +544,31 @@ Datos Fundar
 <div class="right">
 
 </div>
+</div>
+<p><img data-src="datos.png" style="border-radius: 10px;"></p>
+</section>
+<section id="área-datos---nosotros" class="slide level2">
+<h2>Área Datos - Nosotros</h2>
+<!-- Barra superior negra  -->
+<div class="top-bar">
+<div class="left">
+
+</div>
+<div class="center">
+<div class="left-text">
+Nosotros
+</div>
+<div class="logo">
+<img src="./_extensions/fundar/logo_fundar-light.svg">
+</div>
+</div>
+<div class="right">
+
+</div>
+</div>
+<div class="r-stack">
+<p><img data-src="tuq.png" style="border-radius: 10px;" width="2000"></p>
+<p><img data-src="joan.png" class="fragment" style="border-radius: 10px;" width="2000"></p>
 </div>
 </section>
 <section id="argendata" class="slide level2">
@@ -532,9 +590,30 @@ Argendata
 
 </div>
 </div>
+<video autoplay="true" loop="true" width="2000">
+<source src="argendata_preview.mp4">
+</video>
+<script>
+document.querySelector('video').playbackRate = 0.3;
+</script>
+<p><a href="argendata.fund.ar">argendata.fund.ar</a></p>
+<h4 id="datos-curados-por-especialistas">Datos curados por especialistas …</h4>
 </section>
 <section id="github-argendata" class="slide level2">
 <h2>GitHub Argendata</h2>
+<aside class="notes">
+<p>Argendata cuenta con su propios repositorios abiertos en GitHub, donde se encuentran los datos, scripts y documentación de los mismos.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -552,12 +631,24 @@ GitHub Argendata
 
 </div>
 </div>
-<div data-align="center">
-<p><a href="https://github.com/argendatafundar"> <picture> <source srcset="captura.png"> <img src="captura.png" width="1500"> </picture> </a></p>
-</div>
+<h4 id="administrados-por-nosotros">Administrados por nosotros =)</h4>
+<p><img data-src="./argendatagithub.png" class="absolute" style="top: 130px; right: 80px; width: 2000px; "></p>
 </section>
-<section id="workflow" class="slide level2">
-<h2>Workflow</h2>
+<section id="flujo" class="slide level2">
+<h2>Flujo</h2>
+<aside class="notes">
+<p>El flujo de los datos fue el siguiente: (1) se recolectan los datos provistos por les investigadores (2) los datos pasan por un control de calidad y cuando están limpios se almacenan (3) simultáneamente se espeja el trabajo que realizaron les investigadores, llevando todo a scripts en R con un formato estandarizado (3.5) de aquí se toman los datos nuevamente cuando haya que actualizarlos (4) los datos son transformados a un formato más regular para ser graficado (ej. “categoria, nombre, valor”), las recetas de las transformaciones son guardadas para ser reproducidas cuando sea necesario (5) los datos graficados van a la web. <strong>PERO…</strong></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -565,7 +656,7 @@ GitHub Argendata
 </div>
 <div class="center">
 <div class="left-text">
-<em>Workflow</em>
+<em>Flujo</em>
 </div>
 <div class="logo">
 <img src="./_extensions/fundar/logo_fundar-light.svg">
@@ -575,12 +666,43 @@ GitHub Argendata
 
 </div>
 </div>
-<div data-align="center">
-<p><picture> <source srcset="simple.svg"> <img src="captura.png" width="1500"> </picture></p>
+<div class="r-stack">
+<p><img data-src="simple-sin-loops.svg" width="1800"></p>
+<p><img data-src="./simple.svg" class="fragment" data-fragment-index="4" width="1800"></p>
 </div>
+<ul>
+<div class="fragment" data-fragment-index="1">
+<li style="color:#7bb5c4;">
+<span><strong>CONTROL DE CALIDAD</strong></span>
+</li>
+</div>
+<div class="fragment" data-fragment-index="2">
+<li style="color:#8d9bff;">
+<span><strong>ARMONIZACIÓN DE PROCESOS</strong></span>
+</li>
+</div>
+<div class="fragment" data-fragment-index="3">
+<li style="color:#ffab40;">
+<span><strong>TRANSPARENCIA y REPRODUCIBILIDAD</strong></span>
+</li>
+</div>
+</ul>
 </section>
-<section id="workflow-más-granular" class="slide level2">
-<h2>Workflow… más granular</h2>
+<section id="flujo-más-granular" class="slide level2">
+<h2>Flujo… más granular</h2>
+<aside class="notes">
+<p>No nos perdamos: la parte superior de este nuevo diagrama es muy parecida a la que vimos antes. La recolección de datos arranca por los datos provistos, que vienen de distintas fuentes. Hay una fase intermedia de <em>landing</em> de los datos: los almacenamos temporalmente en Google Drive para que les investigadores puedan manejarse con mayor facilidad. (No todo el mundo conoce Git/GitHub). Parte de la información que les pedimos almacenar es también <em>cómo</em> extrajeron esos datos. Idealmente en scripts de R/Python, pero finalmente hubo mucho <code>.txt</code>. (Aprox 45% txt, 25% R, 18% dofile, 9% Python)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -588,7 +710,7 @@ GitHub Argendata
 </div>
 <div class="center">
 <div class="left-text">
-<em>Workflow</em>… más granular
+<em>Flujo</em>… más granular
 </div>
 <div class="logo">
 <img src="./_extensions/fundar/logo_fundar-light.svg">
@@ -598,12 +720,29 @@ GitHub Argendata
 
 </div>
 </div>
-<div data-align="center">
-<p><picture> <source srcset="argendata-flujo-transparente-negro.svg"> <img src="captura.png" width="1700"> </picture></p>
+<div class="r-stack">
+<p><img data-src="argendata-flujo-transparente-negro.svg" class="fragment fade-out" data-fragment-index="4" width="1700"></p>
+<p><img data-src="flujo-controlcalidad.svg" class="fragment fade-in-then-out" data-fragment-index="1" width="1700"></p>
+<p><img data-src="flujo-armonizacion.svg" class="fragment fade-in-then-out" data-fragment-index="2" width="1737"></p>
+<p><img data-src="flujo-transparencia.svg" class="fragment fade-in-then-out" data-fragment-index="3" width="1700"></p>
+<p><img data-src="argendata-flujo-transparente-negro-focus-data.svg" class="fragment fade-in" data-fragment-index="4" width="1700"></p>
 </div>
 </section>
 <section id="datos-abiertos" class="slide level2">
 <h2>¡Datos abiertos!</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -621,12 +760,23 @@ GitHub Argendata
 
 </div>
 </div>
-<div data-align="center">
-<p><picture> <source srcset="repo-data.png"> <img src="captura.png" width="1700"> </picture></p>
-</div>
+<p><img data-src="argendatadatatranengithub.png" class="absolute" style="left: 290px; bottom: -60px; "></p>
 </section>
 <section id="controles-de-calidad" class="slide level2">
 <h2>Controles de calidad</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -655,6 +805,19 @@ Controles de calidad
 </section>
 <section id="controles-de-calidad---algunos-problemas" class="slide level2">
 <h2>Controles de calidad - Algunos problemas</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -672,33 +835,89 @@ Controles de calidad - Algunos problemas
 
 </div>
 </div>
+<div>
 <ul>
-<li>Formatos de entrada
+<li class="fragment">Formatos de entrada
 <ul>
-<li>Variabilidad en el tipo de archivo (csv, tsv, pdf, estáticos).</li>
-<li>Variabilidad en el formato CSV (separador, <em>line terminator</em>, quoting, punto/coma decimal)</li>
+<li class="fragment">Variabilidad en el tipo de archivo (csv, tsv, pdf, estáticos).</li>
+<li class="fragment">Variabilidad en el formato CSV (separador, <em>line terminator</em>, quoting, punto/coma decimal)</li>
 </ul></li>
-<li>Almacenamiento
+<li class="fragment">Almacenamiento
 <ul>
-<li>Google Drive</li>
+<li class="fragment">Google Drive</li>
 </ul></li>
-<li>Control de cambios (versiones)
+<li class="fragment">Control de cambios (versiones)
 <ul>
-<li>GitHub</li>
+<li class="fragment">GitHub</li>
 </ul></li>
-<li>Encoding
+<li class="fragment">Encoding
 <ul>
-<li><a href="./xkcd-standards.png">“Estándares”</a></li>
-<li>UTF-8, UTF-8-BOM, <code>chardet</code> y compañía.</li>
-<li>Caracteres invisibles</li>
-<li>Re-encoding</li>
+<li class="fragment"><p><a href="./xkcd-standards.png">“Estándares”</a></p>
+<p><img data-src="./xkcd-standards.png" width="600"></p></li>
 </ul></li>
-<li>Nomenclatura de fuentes</li>
-<li>Nomenclatura de regiones geográficas</li>
 </ul>
+</div>
+</section>
+<section id="controles-de-calidad---algunos-problemas-1" class="slide level2">
+<h2>Controles de calidad - Algunos problemas</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Barra superior negra  -->
+<div class="top-bar">
+<div class="left">
+
+</div>
+<div class="center">
+<div class="left-text">
+Controles de calidad - Algunos problemas
+</div>
+<div class="logo">
+<img src="./_extensions/fundar/logo_fundar-light.svg">
+</div>
+</div>
+<div class="right">
+
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment">Encoding
+<ul>
+<li class="fragment">UTF-8, UTF-8-BOM, <code>chardet</code> y compañía.</li>
+<li class="fragment">Caracteres invisibles</li>
+<li class="fragment">Re-encoding</li>
+</ul></li>
+<li class="fragment">Nomenclatura de fuentes</li>
+<li class="fragment">Nomenclatura de regiones geográficas</li>
+</ul>
+</div>
 </section>
 <section id="controles-de-calidad---verificadores" class="slide level2">
 <h2>Controles de calidad - Verificadores</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -770,6 +989,19 @@ Controles de calidad - Verificadores
 </section>
 <section id="controles-de-calidad---verificadores-1" class="slide level2">
 <h2>Controles de calidad - Verificadores</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -823,6 +1055,19 @@ Controles de calidad - Verificadores
 </section>
 <section id="controles-de-calidad---verificadores-2" class="slide level2">
 <h2>Controles de calidad - Verificadores</h2>
+<aside class="notes">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
