@@ -2,12 +2,12 @@
 format:
   fundar-revealjs: default
 
-title: La cocina de
+title: 'La cocina de [Argendata](){style="opacity: 0; color: transparent"}'
 subtitle: <a href="https://argendata.fund.ar"><picture><source srcset="./argendata-logo-b.svg"><img src="argendata.fund.ar" width="700"></img></picture></a>
 
 authors: 
   - name: Juan Pablo Ruiz Nicolini
-    acknowledgements: <a>\@tuqmano</a>
+    acknowledgements: '[\@tuqmano]()'
     affiliation: Coordinador del Área de Datos
     email: jpruiznicolini@fund.ar
 
@@ -107,7 +107,10 @@ Fundar (la organizacion); Datos (el equipo); Argendata (la cocina); QA; ETL; T (
 </video>
 <script>
 document.querySelector('video').playbackRate = 0.3;
+document.querySelector('video').style.borderRadius = '10px';
+document.querySelector('video').play();
 </script>
+
 
 [argendata.fund.ar](argendata.fund.ar)
 
@@ -150,9 +153,9 @@ El flujo de los datos fue el siguiente: (1) se recolectan los datos provistos po
 
 ::: {.r-stack}
 
-![](simple-sin-loops.svg){width=1800}
+![](simple-sin-loops.svg){.fragment width=1800 .fade-out fragment-index=4}
 
-![](./simple.svg){.fragment width=1800 fragment-index=4}
+![](simple.svg){.fragment width=1800 fragment-index=4}
 
 :::
 
@@ -247,7 +250,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
-</div>
+</div> 
 
 ::: {.incremental}
 - Formatos de entrada
@@ -287,6 +290,22 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 - Nomenclatura de fuentes
 - Nomenclatura de regiones geográficas
 :::
+
+## Controles de calidad - Haciendo zoom
+::: {.notes}
+:::
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Controles de calidad - Haciendo zoom</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+![](flujo-qa.svg){width=1800}
+
 
 ## Controles de calidad - Verificadores
 ::: {.notes}
@@ -356,7 +375,7 @@ FAILED (failures=1)
 
 ## Controles de calidad - Verificadores 
 ::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+Las verificaciones se pueden _combinar_ de manera paralela, pero cada verificación sigue su _hilo_ secuencial. Finalmente todas confluyen hacia un resultado final a ser graficado como PDF.
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -401,32 +420,100 @@ class ControlCSV:
 
 :::
 
-## Controles de calidad - Verificadores
-::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+## ETL & Scripting
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">ETL & Scripting</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+::: {.r-stack}
+
+![](uso-fuentes-desigu.png){.fragment width=2000}
+
+![](uso-fuentes-mertra.png){.fragment width=2000}
+
+![](uso-fuentes-precio.png){.fragment width=2000}
+
+![](uso-fuentes-todos.png){.fragment width=2000}
+
 :::
+
+
+## Normalización del formato de datos: el problema
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Controles de calidad - Verificadores</div>
+  <div class="left-text">Normalización del formato de datos: el problema</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
 
-Las verificaciones se pueden _combinar_ de manera paralela, pero cada verificación sigue su _hilo_ secuencial. Finalmente todas confluyen hacia un resultado final a ser graficado como PDF.
+Veámoslo como un ejemplo. Tomemos el siguiente gráfico:
 
-<img src="verif-parallel.png" width="1300"></img>
+![](infdes14-webjs.png)
 
-## Controles de calidad - Verificadores
+## Normalización del formato de datos: el problema
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Controles de calidad - Verificadores</div>
+  <div class="left-text">Normalización del formato de datos: el problema</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
 
+::: {.columns .incremental}
+
+::: {.column}
+Su ficha en `data/` es la siguiente:
+
+![](infdes14-ficha.png)
+:::
+
+::: {.column .fragment}
+Y así se ve el `.csv` original
+
+::: {.fragment}
+(no entra en pantalla)
+:::
+
+![](infdes14-original.png)
+:::
+
+:::
+
+## Normalización del formato de datos: el problema
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Normalización del formato de datos: el problema</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+::: {.columns .incremental}
+
+::: {.column}
+Y de alguna manera, ésto ...
+
+![](infdes14-original.png)
+:::
+
+::: {.column .fragment}
+
+... se convierte en ésto:
+
+![](infdes14-web.png)
+:::
+
+:::
