@@ -112,8 +112,8 @@ authors:
 
 <div align='center'>
 <picture>
-<source srcset="complejo.svg">
-<img src="captura.png" width="1500"></img>
+<source srcset="argendata-flujo-transparente-negro.svg">
+<img src="captura.png" width="1700"></img>
 </picture>
 </div>
 

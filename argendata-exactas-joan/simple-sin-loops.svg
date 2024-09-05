@@ -26,8 +26,8 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="1.0389712"
-     inkscape:cx="641.5"
-     inkscape:cy="280.08477"
+     inkscape:cx="652.0874"
+     inkscape:cy="220.41035"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="1920"
@@ -137,24 +137,6 @@
        stroke-width="3"
        fill="#3a414a"
        id="path13" />
-    <path
-       d="M-1581.54-2187.82v32.5a6 6 0 0 1-6 6h-248a6 6 0 0 1-6-6v-13.38"
-       stroke="#3a414a"
-       stroke-width="3"
-       fill="none"
-       id="path14" />
-    <path
-       d="M-1580.06-2187.78h-2.95v-1.54h2.94z"
-       stroke="#3a414a"
-       stroke-width=".05"
-       fill="#3a414a"
-       id="path15" />
-    <path
-       d="M-1841.54-2184.46l4.64 14.26h-9.27z"
-       stroke="#3a414a"
-       stroke-width="3"
-       fill="#3a414a"
-       id="path16" />
     <path
        d="M-1225.2-2260.82h54.88"
        stroke="#3a414a"
@@ -278,42 +260,6 @@
        xlink:href="#i"
        transform="matrix(1,0,0,1,-853.2044815024681,-2325.8167344168846) translate(1.055555555555543 72.42222222222222)"
        id="use34" />
-    <path
-       d="M-789.87-2333.82v-32.5a6 6 0 0 0-6-6h-254.67a6 6 0 0 0-6 6v13.38"
-       stroke="#3a414a"
-       stroke-width="3"
-       fill="none"
-       id="path35" />
-    <path
-       d="M-788.4-2332.32h-2.95v-1.53h2.95z"
-       stroke="#3a414a"
-       stroke-width=".05"
-       fill="#3a414a"
-       id="path36" />
-    <path
-       d="M-1056.54-2337.17l-4.63-14.27h9.27z"
-       stroke="#3a414a"
-       stroke-width="3"
-       fill="#3a414a"
-       id="path37" />
-    <path
-       d="M-1054.87-2187.82v32.5a6 6 0 0 1-6 6h-254.67a6 6 0 0 1-6-6v-13.38"
-       stroke="#3a414a"
-       stroke-width="3"
-       fill="none"
-       id="path38" />
-    <path
-       d="M-1053.4-2187.78h-2.95v-1.54h2.95z"
-       stroke="#3a414a"
-       stroke-width=".05"
-       fill="#3a414a"
-       id="path39" />
-    <path
-       d="M-1321.54-2184.46l4.64 14.26h-9.27z"
-       stroke="#3a414a"
-       stroke-width="3"
-       fill="#3a414a"
-       id="path40" />
     <defs
        id="defs98">
       <path
