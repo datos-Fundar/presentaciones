@@ -28,27 +28,88 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
-## Sobre Fundar
+- **Fundar**  (* _la orga_)
+  - **Datos** (* _el equipo_)
+    -  Nosotros =)
+
+- **Argendata**: la cocina
+  - QA
+  - ETL
+  - _Transformers_
+
+
+##  Fundar
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Sobre Fundar</div>
+  <div class="left-text">La organización</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
 
-## Datos Fundar
+<div align='center'>
+<picture>
+<img src="fundar.png"></img>
+</picture>
+</div>
+
+## Área Datos 
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Datos Fundar</div>
+  <div class="left-text">El equipo</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
+
+<div align='center'>
+<picture>
+<img src="datos.png"></img>
+</picture>
+</div>
+
+
+## Área Datos - Nosotros
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Nosotros</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+<div align='center'>
+<picture>
+<img src="tuq.png"></img>
+</picture>
+</div>
+
+
+## Área Datos - Nosotros
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Nosotros</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+<div align='center'>
+<picture>
+<img src="joan.png" width="2500"></img>
+</picture>
+</div>
+
+
+
 
 ## Argendata
 <!-- Barra superior negra  -->
@@ -61,6 +122,17 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
+
+
+<video autoplay="true" loop="true" width="2000"><source src="argendata_preview.mp4"></video>
+
+
+
+[argendata.fund.ar](argendata.fund.ar)
+
+#### Datos curados por especialistas ... 
+
+
 ## GitHub Argendata
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -72,11 +144,13 @@ authors:
   </div></div><div class="right"></div>
 </div>
 
+#### Administrados por nosotros =)
+
 <div align='center'>
 <a href="https://github.com/argendatafundar">
 <picture>
 <source srcset="captura.png">
-<img src="captura.png" width="1500"></img>
+<img src="captura.png" width="2500"></img>
 </picture>
 </a>
 </div>
@@ -95,9 +169,23 @@ authors:
 <div align='center'>
 <picture>
 <source srcset="simple.svg">
-<img src="captura.png" width="1500"></img>
+<img src="captura.png" width="2000"></img>
 </picture>
 </div>
+
+
+<span style="color:#7bb5c4;">CONTROL DE CALIDAD</span>
+
+<span style="color:#8d9bff;">ARMONIZACIÓN DE PROCESOS</span>
+
+<span style="color:#ffab40;">TRANSPARENCIA y REPRODUCIBILIDAD</span>
+
+
+
+
+
+
+
 
 ## Workflow... más granular
 <!-- Barra superior negra  -->
@@ -113,9 +201,72 @@ authors:
 <div align='center'>
 <picture>
 <source srcset="complejo.svg">
-<img src="captura.png" width="1500"></img>
+<img src="complejo.png" width="2000"></img>
 </picture>
 </div>
+
+
+
+
+
+## Workflow... más granular
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text"><em>Workflow</em>... más granular</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+<div align='center'>
+<picture>
+<img src="control-github.png" width="2500"></img>
+</picture>
+</div>
+
+
+
+
+## Workflow... más granular
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text"><em>Workflow</em>... más granular</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+<div align='center'>
+<picture>
+<img src="armonizacion-github.png" width="2500"></img>
+</picture>
+</div>
+
+
+
+
+
+## Workflow... más granular
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text"><em>Workflow</em>... más granular</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+<div align='center'>
+<picture>
+<img src="transparencia-github.png" width="2500"></img>
+</picture>
+</div>
+
 
 ## ¡Datos abiertos!
 <!-- Barra superior negra  -->
@@ -131,7 +282,7 @@ authors:
 <div align='center'>
 <picture>
 <source srcset="repo-data.png">
-<img src="captura.png" width="1700"></img>
+<img src="captura.png" width="2500"></img>
 </picture>
 </div>
 
