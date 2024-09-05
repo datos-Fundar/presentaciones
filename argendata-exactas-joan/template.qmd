@@ -455,7 +455,7 @@ class ControlCSV:
   </div></div><div class="right"></div>
 </div>
 
-Veámoslo como un ejemplo. Tomemos el siguiente gráfico:
+Veámoslo con un ejemplo. Tomemos el siguiente gráfico:
 
 ![](infdes14-webjs.png)
 
@@ -517,3 +517,45 @@ Y de alguna manera, ésto ...
 :::
 
 :::
+
+## Normalización del formato de datos: el problema
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Normalización del formato de datos: el problema</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+[El código queda así =\)](){.fragment fragment-index=10 .absolute left=10 top=-10 style="color: black;"}
+[¿Cuáles fueron los pasos de la transformación?](){.fragment fragment-index=10 .fade-out style="color: black;"}
+
+
+::: {.r-stack}
+
+![](infdes14-pseudotransformer-1.png){ .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=1}
+
+![](infdes14-pseudotransformer-2.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=2}
+
+![](infdes14-pseudotransformer-3.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=3}
+
+![](infdes14-pseudotransformer-4.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=4}
+
+![](infdes14-pseudotransformer-final.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=5}
+
+![](infdes14-transformer.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=10}
+
+:::
+
+## ¿Por qué no un _standalone_?
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">¿Por qué no un _standalone_?</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
