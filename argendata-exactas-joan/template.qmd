@@ -137,7 +137,7 @@ Argendata cuenta con su propios repositorios abiertos en GitHub, donde se encuen
 
 ## Flujo
 ::: {.notes}
-El flujo de los datos fue el siguiente: (1) se recolectan los datos provistos por les investigadores (2) los datos pasan por un control de calidad y cuando están limpios se almacenan (3) simultáneamente se espeja el trabajo que realizaron les investigadores, llevando todo a scripts en R con un formato estandarizado (3.5) de aquí se toman los datos nuevamente cuando haya que actualizarlos (4) los datos son transformados a un formato más regular para ser graficado (ej. "categoria, nombre, valor"), las recetas de las transformaciones son guardadas para ser reproducidas cuando sea necesario (5) los datos graficados van a la web. **PERO...**
+El flujo de los datos fue el siguiente: (1) se recolectan los datos provistos por les investigadores (2) los datos pasan por un control de calidad y cuando están limpios se almacenan (3) simultáneamente se espeja el trabajo que realizaron les investigadores, llevando todo a scripts en R con un formato estandarizado (3.5) de aquí se toman los datos nuevamente cuando haya que actualizarlos (4) los datos son transformados a un formato más regular para ser graficado (ej. "categoria, nombre, valor"), las recetas de las transformaciones son guardadas para ser reproducidas cuando sea necesario (5) los datos graficados van a la web. **PERO...** en la vida real **es más complejo.**
 :::
 
 <!-- Barra superior negra  -->
@@ -282,14 +282,30 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
   </div></div><div class="right"></div>
 </div>
 
+::: {.columns}
+
+::: {.column}
 ::: {.incremental}
 - Encoding
-  - UTF-8, UTF-8-BOM, `chardet` y compañía.
+  - UTF-8, UTF-8-BOM. `chardet` y compañía.
   - Caracteres invisibles
-  - Re-encoding
-- Nomenclatura de fuentes
-- Nomenclatura de regiones geográficas
+  - Re-encoding.
+- Nomenclatura de fuentes.
+- Nomenclatura de regiones geográficas. 
+
 :::
+
+:::
+
+::: {.column}
+![](supervenn-geonomenclador.png){.fragment style="color: black;"}
+[argendatafundar/geonomencladores](){.fragment style="color: #151515; font-size: 0.8em;"}
+:::
+
+
+:::
+
+
 
 ## Controles de calidad - Haciendo zoom
 ::: {.notes}
@@ -491,6 +507,10 @@ Y así se ve el `.csv` original
 :::
 
 ## Normalización del formato de datos: el problema
+::: {.notes}
+El problema no es hacerlo para _uno_ solo, sino para todos los [~300] gráficos que tiene la web.
+Adicionalmente, tienen que poder ser ejecutados cuando se actualicen los datos.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -518,12 +538,23 @@ Y de alguna manera, ésto ...
 
 :::
 
-## Normalización del formato de datos: el problema
+## Normalización de la normalización
+::: {.notes}
+Hay múltiples maneras de realizar la misma serie de acciones.
+Nuevamente tendríamos variabilidad, ahora incorporada internamente al flujo.
+¿Cómo podemos admitir la colaboración colectiva de distintas personas, con distintos criterios
+y niveles de conocimiento, y asegurar que el resultado final sea (casi) siempre el mismo?
+Pongamos **railes** a la creación de programas. La magia está por detrás (tipos, manipulación del AST, conexión 
+con la "base de datos" [llamadas a GH API y GD API], generación automática de código [imports]),
+y por delante presentamos una interfaz humanamente entendible (errores legibles, nombres declarativos, _realtime feedback_)
+
+**Algo parecido pasa con `argendataR` !!**
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
   <div class="center">
-  <div class="left-text">Normalización del formato de datos: el problema</div>
+  <div class="left-text">Normalización de la normalización</div>
   <div class="logo">
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
@@ -535,15 +566,15 @@ Y de alguna manera, ésto ...
 
 ::: {.r-stack}
 
-![](infdes14-pseudotransformer-1.png){ .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=1}
+![](infdes14-pseudotransformer-1.png){.absolute top=100 right=210 width=1500}
 
-![](infdes14-pseudotransformer-2.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=2}
+![](infdes14-pseudotransformer-2.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=1}
 
-![](infdes14-pseudotransformer-3.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=3}
+![](infdes14-pseudotransformer-3.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=2}
 
-![](infdes14-pseudotransformer-4.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=4}
+![](infdes14-pseudotransformer-4.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=3}
 
-![](infdes14-pseudotransformer-final.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=5}
+![](infdes14-pseudotransformer-final.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=4}
 
 ![](infdes14-transformer.png){.fragment .absolute top=100 right=210 width=1500 .fade-in-then-out fragment-index=10}
 
@@ -559,3 +590,31 @@ Y de alguna manera, ésto ...
   <img src="./_extensions/fundar/logo_fundar-light.svg"/>
   </div></div><div class="right"></div>
 </div>
+
+::: {.columns .incremental}
+
+::: {.column}
+
+Ejemplo de un _do-file_ de Stata.
+![](dofile.png){style="border-radius: 10px;"}
+:::
+
+::: {.column .fragment .fade-right}
+Lenguaje específico para transformar datasets; _"pre-alpha"_ de _transformers_.
+![](ejemplo-transformer-alpha-geonom.png){style="border-radius: 10px;"}
+:::
+
+:::
+
+## La clave es la _familiaridad_
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">La clave es la _familiaridad_</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+![](wrangling.png){style="border-radius: 10px;"}
