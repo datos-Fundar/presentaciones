@@ -201,7 +201,7 @@ No nos perdamos: la parte superior de este nuevo diagrama es muy parecida a la q
 
 ## ¡Datos abiertos!
 ::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -217,7 +217,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 
 ## Controles de calidad
 ::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -240,7 +240,17 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 
 ## Controles de calidad - Algunos problemas
 ::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+Los archivos vienen de distintos workflows: Stata, R, Python, pero más que nada Excel, mucho Excel.
+Y el problema de las herramientas muy empaquetadas (como Excel!!) es que para que el usuario se abstraiga
+de los detalles del funcionamiento de las computadoras, toma muchísimas decisiones que no quedan bien documentadas
+en ningún lado. Particularmente, las herramientas de código cerrado (como Excel!!) sólo admiten compatibilidad con
+su formato cerrado, y nosotros explícitamente necesitamos que los datos estén en `.csv`.
+
+No sólo eso, sino que usar múltiples herramientas a veces re-codifica los datos de manera distinta, y muchas veces
+resalta errores.
+
+Además, datos que vinieron de fuentes "estáticas" (tablas/imágenes en PDFs), pueden venir con caracteres que sólo aparecen
+en dichos formatos
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -270,7 +280,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 
 ## Controles de calidad - Algunos problemas
 ::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+Bibliotecas como `charset-normalizer` o `chardet` funcionan bien en: Archivos escritos en inglés,
+que sean lo suficientemente largos para su análisis (combinaciones probables entre bytes, análisis frecuencial, etc.)
+y generalmente redactados en lenguaje natural. En nuestro caso, los archivos son cortos, generalmente en español, y estructurados.
+
+Usamos `chardet` como fallback, pero Argendata cuenta con su propio detector de encoding.
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -287,7 +301,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 ::: {.column}
 ::: {.incremental}
 - Encoding
-  - UTF-8, UTF-8-BOM. `chardet` y compañía.
+  - UTF-8, UTF-8-BOM. `charset-normalizer` y compañía.
   - Caracteres invisibles
   - Re-encoding.
 - Nomenclatura de fuentes.
@@ -309,6 +323,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 
 ## Controles de calidad - Haciendo zoom
 ::: {.notes}
+Generación de Markdown con Jinja. Engine de templating hecho a mano.
+Generación de PDFs con Pandoc (XeLaTeX).
+
+Wrappers de la API de GitHub y Google Drive. (De las cuales, la última es horrible <3)
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -325,7 +343,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in
 
 ## Controles de calidad - Verificadores
 ::: {.notes}
-Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 
 :::
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -581,6 +599,13 @@ y por delante presentamos una interfaz humanamente entendible (errores legibles,
 :::
 
 ## ¿Por qué no un _standalone_?
+::: {.notes}
+Los lenguajes específicos son muy expresivos, pero también muy restrictivos en el sentido que
+para cambiar algo o hacer algo nuevo, hay que modificar el lenguaje. Dado que es un lenguaje distinto
+esto implica un parser, un lexer, y un compilador/interprete. No sólo el resto de personas que trabajen
+con éste tienen que aprender un nuevo lenguaje, sino que también deben tener el setup correcto.
+Todo esto lleva, además, tareas de mantenimiento.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -607,6 +632,14 @@ Lenguaje específico para transformar datasets; _"pre-alpha"_ de _transformers_.
 :::
 
 ## La clave es la _familiaridad_
+::: {.notes}
+Programar en un lenguaje y entorno familiar no garantiza una transición sin compromisos
+hacia el uso de una herramienta nueva. Lo mismo pasa con bibliotecas (especialmente con grandes bibliotecas
+como NumPy o Pandas), que exigen un _estilo_ de programar particular.
+
+Sin embargo, tener la libertad de poder escribir cualquier tipo de código mientras "la mágia" pasa por detrás
+es un pequeño coste a pagar por la flexibilidad y la normalización del código.
+:::
 <!-- Barra superior negra  -->
 <div class="top-bar">
   <div class="left"></div>
@@ -618,3 +651,44 @@ Lenguaje específico para transformar datasets; _"pre-alpha"_ de _transformers_.
 </div>
 
 ![](wrangling.png){style="border-radius: 10px;"}
+
+## La clave es la _familiaridad_
+::: {.notes}
+En principio nada prohíbe explícitamente crear funciones que hagan todo el trabajo.
+Un pequeño incentivo a escribir funciones más pequeñas (aparte de los lineamientos internos sobre cómo escribir código)
+es que se puedan reutilizar en otros contextos. No sólo es mejor porque genera código más declarativo y modular,
+sino que también nos ahorramos re-escribir variaciones de los mismos procedimientos, y de cierta manera construímos
+colectivamente un micro-lenguaje.
+:::
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">La clave es la _familiaridad_</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+
+Ejemplo de una función de _transformer_ escrita de manera _ad-hoc_
+
+```python
+from pandas import to_datetime
+
+@transformer.convert
+def media_doce_meses_indicador(df: DataFrame, indicador_col = 'indicador', anio_col = 'anio', value_col = 'valor'):
+    result = {'anio': [], 'indicador': [], 'valor': []}
+    df[anio_col] = to_datetime(df[anio_col])
+    df[value_col] = df[value_col].astype(float)
+    for indicador, group in df.groupby(indicador_col):
+        group = group.drop(columns = indicador_col)
+
+        for yyyy, anio in  group.groupby(group.anio.dt.year):
+            result['indicador'].append(indicador)
+            result['anio'].append(yyyy)
+            result['valor'].append(anio.valor.mean())
+
+    result = DataFrame(result)
+    return result
+```

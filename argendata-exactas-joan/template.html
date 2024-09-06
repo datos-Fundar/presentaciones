@@ -733,7 +733,7 @@ GitHub Argendata
 <section id="datos-abiertos" class="slide level2">
 <h2>¡Datos abiertos!</h2>
 <aside class="notes">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -767,7 +767,7 @@ GitHub Argendata
 <section id="controles-de-calidad" class="slide level2">
 <h2>Controles de calidad</h2>
 <aside class="notes">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -808,7 +808,9 @@ Controles de calidad
 <section id="controles-de-calidad---algunos-problemas" class="slide level2">
 <h2>Controles de calidad - Algunos problemas</h2>
 <aside class="notes">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Los archivos vienen de distintos workflows: Stata, R, Python, pero más que nada Excel, mucho Excel. Y el problema de las herramientas muy empaquetadas (como Excel!!) es que para que el usuario se abstraiga de los detalles del funcionamiento de las computadoras, toma muchísimas decisiones que no quedan bien documentadas en ningún lado. Particularmente, las herramientas de código cerrado (como Excel!!) sólo admiten compatibilidad con su formato cerrado, y nosotros explícitamente necesitamos que los datos estén en <code>.csv</code>.</p>
+<p>No sólo eso, sino que usar múltiples herramientas a veces re-codifica los datos de manera distinta, y muchas veces resalta errores.</p>
+<p>Además, datos que vinieron de fuentes “estáticas” (tablas/imágenes en PDFs), pueden venir con caracteres que sólo aparecen en dichos formatos</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -863,7 +865,8 @@ Controles de calidad - Algunos problemas
 <section id="controles-de-calidad---algunos-problemas-1" class="slide level2">
 <h2>Controles de calidad - Algunos problemas</h2>
 <aside class="notes">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Bibliotecas como <code>charset-normalizer</code> o <code>chardet</code> funcionan bien en: Archivos escritos en inglés, que sean lo suficientemente largos para su análisis (combinaciones probables entre bytes, análisis frecuencial, etc.) y generalmente redactados en lenguaje natural. En nuestro caso, los archivos son cortos, generalmente en español, y estructurados.</p>
+<p>Usamos <code>chardet</code> como fallback, pero Argendata cuenta con su propio detector de encoding.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -898,7 +901,7 @@ Controles de calidad - Algunos problemas
 <ul>
 <li class="fragment">Encoding
 <ul>
-<li class="fragment">UTF-8, UTF-8-BOM. <code>chardet</code> y compañía.</li>
+<li class="fragment">UTF-8, UTF-8-BOM. <code>charset-normalizer</code> y compañía.</li>
 <li class="fragment">Caracteres invisibles</li>
 <li class="fragment">Re-encoding.</li>
 </ul></li>
@@ -913,7 +916,8 @@ Controles de calidad - Algunos problemas
 <section id="controles-de-calidad---haciendo-zoom" class="slide level2">
 <h2>Controles de calidad - Haciendo zoom</h2>
 <aside class="notes">
-
+<p>Generación de Markdown con Jinja. Engine de templating hecho a mano. Generación de PDFs con Pandoc (XeLaTeX).</p>
+<p>Wrappers de la API de GitHub y Google Drive. (De las cuales, la última es horrible &lt;3)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1259,6 +1263,19 @@ Normalización de la normalización
 </section>
 <section id="por-qué-no-un-standalone" class="slide level2">
 <h2>¿Por qué no un <em>standalone</em>?</h2>
+<aside class="notes">
+<p>Los lenguajes específicos son muy expresivos, pero también muy restrictivos en el sentido que para cambiar algo o hacer algo nuevo, hay que modificar el lenguaje. Dado que es un lenguaje distinto esto implica un parser, un lexer, y un compilador/interprete. No sólo el resto de personas que trabajen con éste tienen que aprender un nuevo lenguaje, sino que también deben tener el setup correcto. Todo esto lleva, además, tareas de mantenimiento.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -1285,6 +1302,20 @@ Normalización de la normalización
 </section>
 <section id="la-clave-es-la-familiaridad" class="slide level2">
 <h2>La clave es la <em>familiaridad</em></h2>
+<aside class="notes">
+<p>Programar en un lenguaje y entorno familiar no garantiza una transición sin compromisos hacia el uso de una herramienta nueva. Lo mismo pasa con bibliotecas (especialmente con grandes bibliotecas como NumPy o Pandas), que exigen un <em>estilo</em> de programar particular.</p>
+<p>Sin embargo, tener la libertad de poder escribir cualquier tipo de código mientras “la mágia” pasa por detrás es un pequeño coste a pagar por la flexibilidad y la normalización del código.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <!-- Barra superior negra  -->
 <div class="top-bar">
 <div class="left">
@@ -1303,6 +1334,57 @@ La clave es la <em>familiaridad</em>
 </div>
 </div>
 <p><img data-src="wrangling.png" style="border-radius: 10px;"></p>
+</section>
+<section id="la-clave-es-la-familiaridad-1" class="slide level2">
+<h2>La clave es la <em>familiaridad</em></h2>
+<aside class="notes">
+<p>En principio nada prohíbe explícitamente crear funciones que hagan todo el trabajo. Un pequeño incentivo a escribir funciones más pequeñas (aparte de los lineamientos internos sobre cómo escribir código) es que se puedan reutilizar en otros contextos. No sólo es mejor porque genera código más declarativo y modular, sino que también nos ahorramos re-escribir variaciones de los mismos procedimientos, y de cierta manera construímos colectivamente un micro-lenguaje.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- Barra superior negra  -->
+<div class="top-bar">
+<div class="left">
+
+</div>
+<div class="center">
+<div class="left-text">
+La clave es la <em>familiaridad</em>
+</div>
+<div class="logo">
+<img src="./_extensions/fundar/logo_fundar-light.svg">
+</div>
+</div>
+<div class="right">
+
+</div>
+</div>
+<p>Ejemplo de una función de <em>transformer</em> escrita de manera <em>ad-hoc</em></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode pythoncustom"><span id="cb4-1"><a href=""></a><span class="im">from</span> pandas <span class="im">import</span> to_datetime</span>
+<span id="cb4-2"><a href=""></a></span>
+<span id="cb4-3"><a href=""></a><span class="at">@transformer.convert</span></span>
+<span id="cb4-4"><a href=""></a><span class="kw">def</span> media_doce_meses_indicador(df: DataFrame, indicador_col <span class="op">=</span> <span class="st">'indicador'</span>, anio_col <span class="op">=</span> <span class="st">'anio'</span>, value_col <span class="op">=</span> <span class="st">'valor'</span>):</span>
+<span id="cb4-5"><a href=""></a>    result <span class="op">=</span> {<span class="st">'anio'</span>: [], <span class="st">'indicador'</span>: [], <span class="st">'valor'</span>: []}</span>
+<span id="cb4-6"><a href=""></a>    df[anio_col] <span class="op">=</span> to_datetime(df[anio_col])</span>
+<span id="cb4-7"><a href=""></a>    df[value_col] <span class="op">=</span> df[value_col]<span class="re">.astype</span>(<span class="bu">float</span>)</span>
+<span id="cb4-8"><a href=""></a>    <span class="cf">for</span> indicador, group <span class="kw">in</span> df<span class="re">.groupby</span>(indicador_col):</span>
+<span id="cb4-9"><a href=""></a>        group <span class="op">=</span> group<span class="re">.drop</span>(columns <span class="op">=</span> indicador_col)</span>
+<span id="cb4-10"><a href=""></a></span>
+<span id="cb4-11"><a href=""></a>        <span class="cf">for</span> yyyy, anio <span class="kw">in</span>  group<span class="re">.groupby</span>(group<span class="re">.anio.dt.year</span>):</span>
+<span id="cb4-12"><a href=""></a>            result[<span class="st">'indicador'</span>]<span class="re">.append</span>(indicador)</span>
+<span id="cb4-13"><a href=""></a>            result[<span class="st">'anio'</span>]<span class="re">.append</span>(yyyy)</span>
+<span id="cb4-14"><a href=""></a>            result[<span class="st">'valor'</span>]<span class="re">.append</span>(anio<span class="re">.valor.mean</span>())</span>
+<span id="cb4-15"><a href=""></a></span>
+<span id="cb4-16"><a href=""></a>    result <span class="op">=</span> DataFrame(result)</span>
+<span id="cb4-17"><a href=""></a>    <span class="cf">return</span> result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
