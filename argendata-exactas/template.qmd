@@ -266,7 +266,7 @@ No nos perdamos: la parte superior de este nuevo diagrama es muy parecida a la q
 
 - Los datos son recolectados según lo hicieron lxs investigadorxs,
 - automatizado a través de scripts en _**R**_ (más sobre eso después!)
-- Son ~300 fuentes de +100 instituciones distintas.
+- Son ~150 fuentes de +50 instituciones distintas.
 - Procesadas por distintas personas, que trabajan con distintos conocimientos y herramientas.
 
 ¿Cómo hicimos para asegurar la calidad de los datos?
