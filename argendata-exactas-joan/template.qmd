@@ -72,6 +72,22 @@ Fundar (la organizacion); Datos (el equipo); Argendata (la cocina); QA; ETL; T (
 
 ![](datos.png){style="border-radius: 10px;"}
 
+::: {.columns}
+
+
+::: {.column}
+
+![](instagram-gpt.png){ width=320 style="border-radius: 10px;"}         ![](instagram-bigdata.png){ width=400 style="border-radius: 10px;"}
+:::
+
+::: {.column}
+![](instagram-clustering.png){ width=400 style="border-radius: 10px;"} ![](instagram-estado.png){ width=400 style="border-radius: 10px;"}
+
+:::
+
+
+:::
+
 ## Área Datos - Nosotros
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -90,6 +106,25 @@ Fundar (la organizacion); Datos (el equipo); Argendata (la cocina); QA; ETL; T (
 ![](joan.png){.fragment width=2000 style="border-radius: 10px;"}
 
 :::
+
+
+## Argendata Init
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Un sitio web de Fundar</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+</br></br></br></br></br></br></br>
+
+<picture><source srcset="./argendata-logo-b.svg"><img src="argendata.fund.ar" width="700"></img></picture>
+
+
+
 
 ## Argendata
 <!-- Barra superior negra  -->
@@ -454,6 +489,7 @@ class ControlCSV:
 
 :::
 
+
 ## ETL & Scripting
 <!-- Barra superior negra  -->
 <div class="top-bar">
@@ -465,7 +501,43 @@ class ControlCSV:
   </div></div><div class="right"></div>
 </div>
 
+`.Rproj`
+
+![](etl_rstudio.png){width=3000}
+
+
+## ETL & Scripting
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">ETL & Scripting</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+`{argendataR}`
+
+![](argendataR.png)
+
+
+
+## ETL & Scripting
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">ETL & Scripting</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+
 ::: {.r-stack}
+
+
 
 ![](uso-fuentes-desigu.png){.fragment width=2000}
 
@@ -692,3 +764,20 @@ def media_doce_meses_indicador(df: DataFrame, indicador_col = 'indicador', anio_
     result = DataFrame(result)
     return result
 ```
+
+
+## Cierre
+
+<!-- Barra superior negra  -->
+<div class="top-bar">
+  <div class="left"></div>
+  <div class="center">
+  <div class="left-text">Argendata</div>
+  <div class="logo">
+  <img src="./_extensions/fundar/logo_fundar-light.svg"/>
+  </div></div><div class="right"></div>
+</div>
+
+
+![](redes_argendata.png){style="border-radius: 10px;"}
+
