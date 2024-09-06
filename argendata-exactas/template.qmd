@@ -765,6 +765,19 @@ def media_doce_meses_indicador(df: DataFrame, indicador_col = 'indicador', anio_
     return result
 ```
 
+::: {.fragment .fade-down}
+```python
+pipeline = chain(
+rename_cols(map={'variable': 'indicador', 'fecha': 'anio'}),
+	media_doce_meses_indicador(indicador_col='indicador', anio_col='anio', value_col='valor'),
+	query(condition="indicador not in ('oro', 'litio', 'plata', 'cobre')"),
+	replace_values(col='indicador', values={'indice_cobre': 'Cobre', 'indice_litio': 'Litio', 'indice_oro': 'Oro', 'indice_plata': 'Plata'}),
+	query(condition='anio < 2024'),
+	rename_cols(map={'indicador': 'categoria'})
+)
+```
+:::
+
 
 ## Cierre
 
